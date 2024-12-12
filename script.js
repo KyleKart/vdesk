@@ -7,27 +7,6 @@ function fileExt(fileName) {
     return fileName.split('.').pop().toLowerCase();
 }
 
-        async function localFetch(filePath) {
-            try {
-                const response = await fetch(filePath, { method: 'HEAD' });
-                return response.ok;
-            } catch (error) {
-                console.error(`Error fetching file: ${error.message}`);
-                return false;
-            }
-        }
-
-        async function svgExist(fileName) {
-            const filePath = `https://kylekart.github.io/vdesk/icons/${fileName}.svg`;
-            const exists = await localFetch(filePath);
-
-            if (exists) {
-                return filePath;
-            } else {
-                return 'https://kylekart.github.io/vdesk/icons/idk.svg';
-            }
-        }
-
 selectDirectoryButton.addEventListener('click', async () => {
     try {
         const directoryHandle = await window.showDirectoryPicker();
