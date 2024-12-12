@@ -39,8 +39,32 @@ selectDirectoryButton.addEventListener('click', async () => {
 
                 if (fileExt(entry.name) === "png" || fileExt(entry.name) === "gif" || fileExt(entry.name) === "jpg") {
                 fileIcon = blobURL;
+                }
+                else if (fileExt(entry.name) === "zip") {
+                    fileIcon = "./icons/" + fileExt(entry.name) + ".svg";
+                }
+                else if (fileExt(entry.name) === "txt") {
+                    fileIcon = "./icons/" + fileExt(entry.name) + ".svg";
+                }
+                else if (fileExt(entry.name) === "apk") {
+                    fileIcon = "./icons/" + fileExt(entry.name) + ".svg";
+                }
+                else if (fileExt(entry.name) === "js") {
+                    fileIcon = "./icons/" + fileExt(entry.name) + ".svg";
+                }
+                else if (fileExt(entry.name) === "pdf") {
+                    fileIcon = "./icons/" + fileExt(entry.name) + ".svg";
+                }
+                else if (fileExt(entry.name) === "mp3") {
+                    fileIcon = "./icons/" + fileExt(entry.name) + ".svg";
+                }
+                else if (fileExt(entry.name) === "mp4") {
+                    fileIcon = "./icons/" + fileExt(entry.name) + ".svg";
+                }
+                else if (fileExt(entry.name) === "csv") {
+                    fileIcon = "./icons/" + fileExt(entry.name) + ".svg";
                 } else {
-                    fileIcon = svgExist(fileExt(entry.name));
+                    fileIcon = "./icons/idk.svg";
                 }
                 const icon = document.createElement('div');
                 icon.className = 'icon';
