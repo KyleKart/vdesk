@@ -18,13 +18,13 @@ function fileExt(fileName) {
         }
 
         async function svgExist(fileName) {
-            const filePath = `./icons/${fileName}.svg`;
+            const filePath = `https://kylekart.github.io/vdesk/icons/${fileName}.svg`;
             const exists = await localFetch(filePath);
 
             if (exists) {
                 return filePath;
             } else {
-                return './icons/idk.svg';
+                return 'https://kylekart.github.io/vdesk/icons/idk.svg';
             }
         }
 
